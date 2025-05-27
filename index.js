@@ -19,6 +19,12 @@ app.use(cors());
 app.use(bodyParser.json());
 app.use('/uploads', express.static('uploads'));
 
+app.get("/", (req, res) => {
+    res.json("gello");
+})
+
+
+
 // Routes
 app.use("/api/admissions", admissionRoutes);
 app.use("/api/contacts", contactRoutes);
